@@ -1,0 +1,24 @@
+<label>Server Name</label>
+<input type="text" class="form-control"
+       [(ngModel)]="serverName">
+<p> {{ serverName }}</p>
+<hr>
+<button class="btn btn-primary" [disabled]="!allowNewServer"
+        (click)="onCreateServer()">Add Server
+</button>
+<!--<p [innerText]="allowNewServer"></p>-->
+<!--<p>{{ ServerCreationStatus }}</p>-->
+<p *ngIf="serverCreated">Server was created, server name is {{ serverName }}</p>
+<app-server></app-server>
+<app-server></app-server>
+
+<!--<label>UserName: </label>-->
+<!--<input type="text"-->
+<!--       [(ngModel)]="userName"-->
+<!--       class="form-control">-->
+<!--<p>{{ userName }}</p>-->
+<!--<button [disabled]=" userName === '' "-->
+<!--        class="btn btn-primary"-->
+<!--        (click)="userName = ''">-->
+<!--  Reset-->
+<!--</button>-->
